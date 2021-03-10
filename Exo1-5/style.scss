@@ -1,0 +1,112 @@
+// Les mixins permet de créer des groupes de déclarations css qu'on souhaite reutiliser sur l'ensemble de notre code et les variables permet de stocker des informations comme couleur, police 
+
+// Exo1
+//VARIABLES permet de stoker des valeurs.
+$color-red:#FF0000;
+$color-purple:#663AB6;
+$color-yellow:#FFE93B;
+
+h1{
+    color:$color-red;
+}
+h3{
+    color:$color-purple;
+}
+h4{
+    color: $color-yellow;
+}
+
+
+// Exo2
+// MIXINS:permet de stocker des propriétés et leurs valeurs.
+@mixin font-small{
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    color: aqua;
+    
+}
+@mixin font-medium{
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: chartreuse;
+    
+}
+@mixin font-large{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: brown;
+    
+}
+
+
+// Exo3
+
+@mixin text-style{
+    text-decoration: underline;
+    color: darkgreen;
+}
+
+.animals li{
+    @include text-style();
+}
+
+// Exo4
+@mixin text{
+    color: aqua;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+.text1{
+    @include text();
+}
+.text2{
+    @extend .text1;
+    text-decoration: underline;
+}
+// // // class fanômes
+// .ghost{
+// // //text-decoration:underline;
+// }
+// // // .text2{
+// // // @include .text1;
+// // // @extend .ghost;    
+// // // }
+
+
+// Exo5
+@mixin hover {
+        background-color: coral;
+        text-decoration: underline;
+    }
+    
+    .hover{
+            &:hover{
+                @include hover;
+        
+            }
+        }
+    }
+    
+        
+
+
+
+
+// @mixin toto {
+//     @include textLime();
+//     @include font-medium();
+// }
+
+//  // Exo3
+// .animals  {
+//     padding: 0;
+
+//     li {
+//         @include toto();
+//     }
+// }
+
+// p {
+//     color: $color-red;
+// }
