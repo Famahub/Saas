@@ -1,0 +1,14 @@
+.lien li:hover {
+  color: green;
+  text-decoration: underline;
+}
+
+.title {
+  color: #FFE93B;
+}
+
+h1 {
+  background-image: url(/Exo6/oiseaux.jpg);
+}
+
+/*# sourceMappingURL=style.css.map */

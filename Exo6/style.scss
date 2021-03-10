@@ -1,0 +1,24 @@
+$color-yellow:#FFE93B;
+
+@mixin textStyle {
+        color:green;
+        text-decoration: underline;
+    
+    
+       
+}
+.lien{
+    li {
+        &:hover{
+            @include textStyle();
+    
+        }
+    }
+}
+
+.title{
+    color: $color-yellow;
+}
+h1{
+    background-image: url(/Exo6/oiseaux.jpg);
+}
